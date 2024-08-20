@@ -19,9 +19,6 @@ const blogSchema = new mongoose.Schema({
 });
 
 const Blog = mongoose.model('registers', blogSchema);
-Blog.find({}).then(blogs =>{
-    console.log(blogs)
-})
 app.get('/',(req, res) => {
     console.log(Blog)
     Blog.find({}).then(function(blogs){
